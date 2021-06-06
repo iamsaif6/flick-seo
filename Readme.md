@@ -1,10 +1,10 @@
-# Book Shop - online e-Book site
+# Flick SEO
 
 <br>
 
-<img src="https://github.com/iamsaif6/book-shop/blob/master/Screenshot%202021-06-06%20at%2010-35-51%20Book%20Shop.png" width="800px" />
+<img src="https://github.com/iamsaif6/flick-seo/blob/main/ezgif.com-gif-maker.gif" width="800px" />
 
-> ## For live preview : [Click Here](https://iamsaif6.github.io/book-shop/ "Book shop")
+> ## For live preview : [Click Here](https://iamsaif6.github.io/flick-seo/ "Flick Seo")
 
  <br>
 
