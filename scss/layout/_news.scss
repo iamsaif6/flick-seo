@@ -1,0 +1,27 @@
+.news{
+
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(20rem, 1fr));
+        grid-gap: 7rem;
+
+        @include respond(900px){
+            grid-gap: 4rem;
+        }
+    }
+
+    &__date{
+        font-size: 1.3rem;
+        color: var(--color-gray);
+    }
+
+    &__title{
+        font-size: 2.5rem;
+        color: var( --color-dark);
+        text-transform: capitalize;
+        font-weight: 400;
+        margin: 1rem 0 1.5rem 0;
+        line-height: 1.5;
+    }
+}

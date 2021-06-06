@@ -1,0 +1,141 @@
+.offcanvas{
+
+    &__trigger{
+
+        display: none;
+        cursor: pointer;
+
+        @include respond(800px){
+            display: flex;
+            align-items: center;
+            height: 5rem;
+        }
+    
+
+        &-span{
+            height: 2px;
+            width: 5rem;
+            background-color: var(--color-primary);
+            display: inline-block;
+            position: relative;
+            transition: all .5s;
+
+            &.active{
+                background-color: transparent;
+
+                &::after{
+                    transform: rotate(135deg);
+                    top: auto;
+                }
+
+                &::before{
+                    transform: rotate(-135deg);
+                    bottom: auto;
+                }
+            }
+
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 8px;
+                background-color: var(--color-primary);
+                transition: all .3s;
+            }
+
+            &::before{
+                top: auto;
+                bottom: 8px;
+            }
+        }
+
+    }
+
+    &__overlay{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        transition: all .4s;
+        z-index: 999;
+        visibility: hidden;
+
+        &.active{
+            opacity: .5;
+            visibility: visible;
+
+        }
+    }
+
+    &__menu{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        width: 40rem;
+        background: #fff;
+        z-index: 9991;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s;
+
+
+        @include respond(400px){
+            width: 100%;
+        }
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+            left: 0%;
+        }
+
+        &-close{
+            font-size: 5rem;
+            color: var(--color-primary);
+            position: absolute;
+            top: 5rem;
+            right: 4rem;
+            font-family: sans-serif;
+            cursor: pointer;
+            display: none;
+
+            @include respond(400px){
+                display: inline-block;
+            }
+
+        }
+    }
+
+    &__list{
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item{
+        margin: 1rem 0;
+    }
+
+    &__link{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 2rem;
+            display: inline-block;
+            padding: 1rem 0;
+            color: #222;
+        }
+    }
+}

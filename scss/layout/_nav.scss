@@ -1,0 +1,315 @@
+.nav-top{
+
+
+
+    background-color: var(--color-gray-light);
+    padding: 1.4rem 0;
+
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(600px){
+            justify-content: center;
+        }
+    }
+
+    &__left{
+
+        .nav-top__link:not(:last-child){
+            margin-right: 2.5rem;
+        }
+
+        .nav-top__icon{
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__right{
+
+        .nav-top__link{
+            margin-left: 2.5rem;
+        }
+
+        .nav-top__icon{
+            margin-left: 1rem;
+        }
+
+        @include respond(600px){
+            display: none;
+        }
+
+    }
+
+    &__link{
+        
+        &,
+        &:link,
+        &:visited{
+            font-size: 1.5rem;
+            color: var(--color-gray);
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.nav{
+
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--color-gray-light-2);
+    background-color: var(--color-white);
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+
+    &.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        box-shadow:0px 0px 18px -5px #0c121b94;
+    }
+
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo{
+
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &-img{
+            margin-right: 1rem;
+        }
+
+        &-text{
+            font-family: $roboto;
+            font-weight: 900;
+            text-transform: capitalize;
+            font-size: 3rem;
+            color: var(--color-dark);
+        }
+    }
+
+    &__list{
+        @include respond(800px){
+            display: none;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+    }
+
+    &__link{
+        font-family: $fira;
+        font-weight: 400;
+        
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            color:var(--color-dark);
+            transition: all .3s;
+            display: inline-block;
+            padding: 1.5rem 0;
+            padding-left: 1rem;
+            margin-left: 2.5rem;
+            position: relative;
+
+
+            &::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 3px;
+                width: 90%;
+                height: 2px;
+                background-color: var(--color-primary);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s;
+                transform: scale(0);
+                transform-origin: right;
+
+            }
+
+            &:hover{
+                color: var(--color-primary);
+
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+
+            &.active::after{
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+    }
+
+}
+
+// Theme Button
+
+.theme__changer{
+    background-color: rgba(12, 14, 20, 0.699);
+    display: inline-block;
+    padding: 1rem 0rem;
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    border-radius: 50px;
+    transition: all .3s;
+    z-index: 99;
+    transform: translateY(-50%);
+
+}
+
+.theme__btn{
+    font-family: inherit;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all .3s;
+    background-color: #222;
+    border: 2px solid #000;
+    font-weight: 500;
+    color: #222;
+    outline: none;
+    margin: 10px;
+    display: block;
+
+    &:focus{
+        outline: none;
+    }
+
+    &.active{
+        color: #222;
+        box-shadow: 0 0 5px 2px red;
+        border: 2px solid red;
+        color: red;
+    }
+}
+
+.theme__light{
+    background-color: #F5F5F5;
+}
+
+.theme__dark{
+    background-color: #222;
+    color: #fff;
+}
+
+
+// Dialouge 
+
+.dialoge{
+
+    position: fixed;
+    background-color: var(--color-primary);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    padding: 2rem 7rem;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    @include respond(700px){
+        flex-direction: column;
+        padding: 2rem 3rem
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__text{
+        flex: 0 0 80%;
+        font-size: 1.5rem;
+        color: #fff;
+        padding-right: 5rem;
+        line-height: 1.7;
+
+        @include respond(700px){
+            margin-bottom: 2rem;
+            text-align: center;
+            padding-right: 0;
+        }
+    
+    }
+
+    &__close,&__quit{
+        background-color: transparent;
+        padding: .7rem 3rem;
+        font-size: 1.4rem;
+        font-family: inherit;
+        outline: none;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        transition: all .3s;
+        margin: .5rem 0;
+
+        @include respond(700px){
+           width: 100%;
+           display: block;
+        }
+
+        &:hover{
+            color: #222;
+            background-color: #fff;
+        }
+    }
+
+    &__overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9992;
+        background-color: #000;
+        opacity: 0;
+        transition: all .3s;
+        visibility: hidden;
+
+        &.active{
+            opacity: .7;
+            visibility:visible;
+        }
+    }
+}

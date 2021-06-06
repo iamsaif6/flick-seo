@@ -1,0 +1,31 @@
+.partner{
+
+    padding: 4rem 0;
+    background-color: var(--color-gray-light);
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr));
+        grid-gap: 4rem;
+        align-items: center;
+    }
+    
+    &__heading{
+        font-size: 3rem;
+        font-family: $fira;
+        color: var(--color-dark);
+        font-weight: 400;
+
+        @include respond(800px){
+            text-align: center;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        max-width: 15rem;
+        justify-self: center;
+    }
+
+
+}

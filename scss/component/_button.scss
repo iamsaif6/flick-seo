@@ -1,0 +1,23 @@
+.btn{
+
+    &,
+    &:link,
+    &:visited{
+        outline: none;
+        font-family: $fira;
+        font-size: 1.6rem;
+        color: var(--color-white);
+        padding: 1.4rem 3rem;
+        background-color: var(--color-primary);
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: all .3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    &:hover{
+        background-color: var(--color-dark);
+    }
+}

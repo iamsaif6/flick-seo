@@ -1,0 +1,79 @@
+.header{
+
+    padding: 20rem 0 15rem 0;
+    font-family: $maven;
+
+    &__text{
+        max-width: 55rem;
+        margin: 0 auto;
+        margin-bottom: 8rem;
+        width: 90%;
+
+        @include respond(600px){
+            margin-bottom: 5rem;
+        }
+
+        
+    }
+
+    &__title{
+        font-weight: 500;
+        font-size: 3.5rem;
+        color: var(--color-dark);
+        margin-bottom: 1.5rem;
+
+        @include respond(500px){
+            font-size: 3rem;
+        }
+    }
+
+    &__details{
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: var(--color-gray);
+        line-height: 1.7;
+    }
+
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80rem;
+        margin:  0 auto;
+
+        @include respond(600px){
+            flex-direction: column;
+        }
+    }
+
+    &__input{
+        display: inline-block;
+        padding: 1.4rem 2rem;
+        text-transform: capitalize;
+        font-family: inherit;
+        font-size: 1.5rem;
+        border: none;
+        border: 1px solid var(--color-gray-light-3);
+        border-radius: 5px;
+        flex: 0 0 35%;
+        transition: all .3s;
+
+        &:focus{
+            background-color: var(--color-gray-light);
+            outline: none;
+        }
+
+        @include respond(600px){
+            margin-bottom: 2rem;
+            flex: 1%;
+            width: 90%;
+        }
+    }
+    
+    &__btn{
+        @include respond(600px){
+            width: 90%;
+        }
+    }
+
+}

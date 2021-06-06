@@ -1,0 +1,85 @@
+
+:root{
+    --color-dark : #7E7E7E;
+    --color-primary: #0482F8;
+    --color-gray-light: #0C0E14;
+    --color-gray-light-2: #1B1E29;
+    --color-gray-light-3: #DDDDDD;
+    --color-gray-light-4: #B9B9B9;
+    --color-blue: #0C0E14;
+    
+}
+
+body{
+    transition: all .3s;
+    background-color: #0C0E14;
+}
+
+
+.nav-top,
+.nav{
+    background-color: #0C0E14;
+    transition: background-color .1s;
+}
+
+.nav,
+.testimonial{
+    border-color: transparent;
+    box-shadow: 0px 5px 15px 10px #0C121B !important;
+}
+
+.nav__logo-text{
+    color: #fff;
+}
+
+.section__heading,
+.header__title,
+.service__heading,
+.news__title,
+.footer__bottom-title{
+    color:#DDDDDD ;
+}
+
+.header__input,
+.footer__input{
+    background-color: #131620;
+    border: 1px solid #282D36;
+    color: #888888;
+}
+
+.footer__input:focus{
+    background-color: #0C0E14;
+}
+
+.btn{
+    box-shadow: 0px 0px 5px 0px #0482F8;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 9px 0px #7E7E7E;
+}
+
+.service__flex,
+.service__box{
+    border-color: #1B1E29 ;
+}
+
+.seo__wrap,
+.seo__pricing{
+    border-color: #282D36;
+}
+
+.btn.seo__btn{
+    background-color: #0C0E14 ;
+    border-color: #0C0E14 ;
+}
+
+.btn.seo__btn:hover,
+.btn.seo__btn.active{
+    background-color: var(--color-primary) ;
+    border-color: var(--color-primary)  ;
+}
+.partner{
+    background-color: #131620;
+}
+

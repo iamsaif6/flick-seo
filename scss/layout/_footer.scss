@@ -1,0 +1,140 @@
+.footer{
+
+    padding: 10rem 0 8rem 0;
+    background-color: var(--color-dark-3);
+
+    &__top{
+        padding-bottom: 7rem;
+        border-bottom: 1px solid var(--color-dark-4);
+    }
+
+    &__form{
+        max-width: 40rem;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__subtitle{
+        font-size: 1.4rem;
+        color: var(--color-gray-light-4);
+    }
+
+    &__title{
+        font-size: 2.4rem;
+        color: var(--color-white);
+        font-weight: 400;
+        margin: 1rem 0 4rem 0;
+    }
+
+    &__input{
+        padding: 1.5rem 3rem;
+        background-color: var(--color-white);
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 1.4rem;
+        border-radius: 100px;
+        width: 100%;
+        transition: all .3s;
+        border: 1px solid transparent;
+
+        &:focus{
+            background-color: var(--color-gray-light-3);
+            outline: none;
+        }
+    }
+
+    &__btn{
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        right: -2px;
+        padding: 1.5rem 4rem;
+        font-size: 1.4rem;
+        border: 1px solid transparent;
+    }
+
+    &__bottom{
+        padding-top: 7rem;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: max-content max-content max-content 1fr;
+        grid-gap: 7rem;
+        align-items: center;
+
+        @include respond(700px){
+            grid-template-columns: repeat(auto-fit , minmax(20rem, 1fr));
+        }
+
+        @include respond(800px){
+            grid-gap: 4rem;
+        }
+    }
+
+    &__single{
+
+    }
+
+    &__bottom-title{
+        font-size: 1.8rem;
+        color: var(--color-gray-light-2);
+    }
+
+    &__text{
+        color: var(--color-gray-light-4);
+        font-size: 1.4rem;
+        line-height: 1.9;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        display: block;
+        font-size: 1.4rem;
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__link{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: var(--color-white);
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            display: inline-block;
+            transition: all .3s;
+        }
+
+    }
+
+    &__social{
+
+        text-align: right;
+
+        @include respond(700px){
+            text-align: left;
+        }
+
+        &-link{
+            font-size: 2rem;
+            color: var(--color-white);
+            padding: 1.5rem 0;
+            display: inline-block;
+            margin-left: 1.5rem;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--color-primary);
+            }
+        }
+        
+    }
+}

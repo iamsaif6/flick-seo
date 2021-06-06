@@ -1,0 +1,48 @@
+
+:root{
+    --color-black: #000;
+    --color-dark : #222222;
+    --color-dark-2 : #002222;
+    --color-dark-3 : #0C0E14;
+    --color-dark-4: #292934;
+    --color-white: #fff;
+    --color-primary: #4442F2;
+    --color-gray: #888888;
+    --color-gray-2: #666666;
+    --color-gray-light: #F5F5F5;
+    --color-gray-light-2: #EEEEEE;
+    --color-gray-light-3: #DDDDDD;
+    --color-gray-light-4: #B9B9B9;
+    --color-blue: #4442F2;
+    
+}
+
+
+
+
+*,
+*::after,
+*::before{
+    margin:  0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    @include respond(1000px){
+        font-size: 50%;
+    }
+}
+
+body{
+    font-family: $maven;
+    font-weight: 400;
+    transition: all .3s;
+    overflow-x: hidden;
+}
+

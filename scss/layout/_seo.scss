@@ -1,0 +1,139 @@
+.seo{
+
+    padding: 12rem 0;
+
+    &__grid{
+        margin-top: 10rem;
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(auto-fit , minmax(23rem ,1fr));
+        align-items: center;
+    }
+
+    &__wrap{
+        text-align: center;
+        border: 1px solid var(--color-gray-light-3);
+        padding: 4rem 0;
+        border-radius: 10px;
+
+        &.active{
+            padding-top: 0;
+        }
+    }
+
+    &__pricing{
+        padding-bottom: 3rem;
+        border-bottom: 1px solid var(--color-gray-light-3);
+    }
+
+    &__price{
+        font-size: 6rem;
+        color: var(--color-primary);
+        font-family: $cat;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    &__month{
+        font-family: $cat;
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: var(--color-primary);
+    }
+
+    &__name{
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: var(--color-dark);
+        text-transform: capitalize;
+    }
+
+    &__purchase{
+
+    }
+
+    &__list{
+        list-style: none;
+        margin: 4rem 0;
+    }
+
+    &__item{
+        font-size: 1.5rem;
+        color: var(--color-gray);
+
+        &:not(:last-child){
+            margin-bottom: 1.7rem;
+        }
+    }
+
+
+    &__btn{
+        &,
+        &:link,
+        &:visited{
+            text-transform: capitalize;
+            font-family: $cat;
+            font-weight: 500;
+            padding: .6rem 3rem;
+            background-color: var(--color-white);
+            color: var( --color-dark);
+            border: 1px solid var(--color-gray-light-3);
+            font-size: 1.4rem;
+
+            @include respond(500px){
+                padding: 1rem 4rem;
+            }
+        }
+
+        &:hover, &.active{
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+    }
+
+
+    &__wrap.active{
+        padding-top: 0;
+        border-color: var(--color-primary);
+       
+
+        .seo__pricing{
+            background-color: var(--color-primary);
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+        }
+
+        .seo__saved{
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%,50%);
+            font-size: 2.5rem;
+            width: 6rem;
+            height: 6rem;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .seo__list{
+            padding-top: 2.5rem;
+        }
+
+        .seo__name,
+        .seo__price,
+        .seo__month{
+            color: var(--color-white);
+        }
+
+
+    }
+
+}

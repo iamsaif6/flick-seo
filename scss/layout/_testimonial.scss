@@ -1,0 +1,43 @@
+.testimonial{
+
+    background-color: var(--color-blue);
+    padding: 7rem 0;
+
+    &__wrap{
+
+    }
+
+    &__single{
+        color: var(--color-white);
+        max-width: 70rem;
+        margin:  0 auto;
+    }
+
+    &__img{
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-image: url(../../img/testimonial.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__text{
+        font-size: 2.2rem;
+        font-family: $roboto;
+        font-weight: 400;
+        font-style: italic;
+        margin: 1rem 0;
+        line-height: 1.6;
+    }
+
+    &__author{
+        font-size: 1.5rem;
+        font-family: $roboto;
+        color: var(--color-gray-light-3);
+    }
+
+
+}
